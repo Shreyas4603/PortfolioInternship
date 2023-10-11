@@ -7,23 +7,46 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <title>Your Name - Portfolio</title>
 </head>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const navLinks = document.querySelectorAll("nav ul li a");
+    
+      navLinks.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+          event.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+    
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    });
+    </script>
+    
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <section id="home">
         <div class="home-text">
             <h1 class="hello">Hello !!</h1>
@@ -38,54 +61,150 @@
     </section>
 
 
-    <section class="skills">
-        <center>
-            <div>
-                <p class="exp">I have experience in these technologies</p>
+    <section id="skills">
+        
+            <div style="display: flex;flex-direction: column;">
+                <p class="exp" style="font-size: 2rem;text-align: center;">I have experience in these technologies</p>
                 <div class="skill-container">
+
                     <div class="card">
-                        <img class="logo" src="python.png" alt="python"/>
+                        <img class="logo" src="java.png" alt="python" />
+                        <p class="name">Java</p>
+                    </div>
+
+                    <div class="card">
+                        <img class="logo" src="html.png" alt="python" />
+                        <p class="name">HTML</p>
+                    </div>
+
+                    <div class="card">
+                        <img class="logo" src="css.png" alt="python" />
+                        <p class="name">CSS</p>
+                    </div>
+
+                    <div class="card">
+                        <img class="logo" src="mysql.png" alt="python" />
+                        <p class="name">MySQL</p>
+                    </div>
+
+                    <div class="card">
+                        <img class="logo" src="python.png" alt="python" />
                         <p class="name">Python</p>
                     </div>
                     <div class="card">
-                        <img class="logo" src="c.png" alt="python"/>
+                        <img class="logo" src="c.png" alt="python" />
                         <p class="name">C</p>
                     </div>
                     <div class="card">
-                        <img class="logo" src="js.png" alt="python"/>
+                        <img class="logo" src="js.png" alt="python" />
                         <p class="name">Javascript</p>
                     </div>
                     <div class="card">
-                        <img class="logo" src="react.png" alt="python"/>
+                        <img class="logo" src="react.png" alt="python" />
                         <p class="name">React Js</p>
-                    </div>
-                    <div class="card">
-                        <img class="logo" src="tailwind.jpg" alt="python"/>
-                        <p class="name">Tailwind CSS</p>
                     </div>
                 </div>
             </div>
-            <div>
-                <p class="skill-text">As a dedicated web developer, I've honed a versatile skill set that empowers me to bring creative visions to life in the digital realm. My proficiency spans both front-end and back-end technologies, including HTML, CSS, JavaScript, and a variety of popular frameworks and libraries.
+            
+                <p class="skill-text" style="text-align: center;">As a dedicated web developer, I've honed a versatile skill set that empowers me to
+                    bring creative visions to life in the digital realm. My proficiency spans both front-end and
+                    back-end technologies, including HTML, CSS, JavaScript, and a variety of popular frameworks and
+                    libraries.
                 </p>
-            </div>
-        <h1 style="font-size: 2rem; margin:5rem; padding: 1rem; border-radius: 0.3rem; width: 20rem;background-color: rgb(60, 98, 165);color: white;">Other Skills</h1>
-        </center>
+            
+            <h1
+                style="font-size: 2rem; margin:5rem; padding: 1rem; border-radius: 0.3rem; width: 20rem;background-color: rgb(60, 98, 165);color: white; text-align: center;">
+                Other Skills</h1>
+        
+                
 
         <div class="skill-text-container">
-            <div class="skill-card" style="display: flex; padding: 2rem; align-items: center;justify-content: space-evenly;">
+            <div class="skill-card"
+                style="display: flex; padding: 2rem; align-items: center;justify-content: space-evenly;">
                 <left>Competative programming</left>
                 <right>I regularly do Competative coding since 3 years </right>
             </div>
-            <div class="skill-card" style="display: flex; padding: 2rem; align-items: center;justify-content: space-evenly;">
+            <div class="skill-card"
+                style="display: flex; padding: 2rem; align-items: center;justify-content: space-evenly;">
                 <left>Design and Development</left>
-                <right>I have designed many professional websites. Over time i have gained knowledge about UI and UX</right>
+                <right>I have designed many professional websites. Over time i have gained knowledge about UI and UX
+                </right>
             </div>
 
         </div>
 
 
     </section>
+
+    <section id="projects" style="margin-block: 10rem;">
+        
+            <p class="expPro" >Projects</p>
+            <div class="project-container">
+
+                <a href="https://github.com/Shreyas4603/Youtube-Clone-Final.git" target="_blank">
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="Youtube.PNG" alt="Project 1" />
+                    </div>
+                    <div class="title-desc">
+                    <h3 class="project-title">Youtube  Clone</h3>
+                    <p class="project-description">Youtube Clone, that gives complete youtube experience</p>
+                </div>
+                </div>
+                </a>
+
+                <a href="https://github.com/Shreyas4603/Image-Steganography.git" target="_blank">
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="Image.PNG" alt="Project 2" />
+                    </div>
+                    <div class="title-desc">
+                    <h3 class="project-title">Image Steganography</h3>
+                    <p class="project-description">Hide secret messages inside images</p>
+                </div>
+                </div>
+                </a>
+
+                <a href="https://github.com/Shreyas4603/Quiz_App_Server_Client.git" target="_blank">
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="Quiz.PNG" alt="Project 3" />
+                    </div>
+                    <div class="title-desc">
+                    <h3 class="project-title">Quiz Master 3000</h3>
+                    <p class="project-description">Create and attend quizes easily for free</p>
+                </div>
+                </div>
+                </a>
+                </div>
+            </div>
+            
+            
+            
+        
+            
+
+    </section>
+    <section id="contact">
+        <h1 style="font-size: 2.5rem;">Get in touch</h1>
+        <h1 style="font-weight: 300; color: grey;">Lets collab and build something great!!</h1>
+        <h2>Contact Me</h2>
+        
+        <div class="contact-links">
+            <a href="https://github.com/Shreyas4603" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/shreyas-undefined-2506a4293/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:altshreyas7@gmail.com">
+                <i class="far fa-envelope"></i> Email
+            </a>
+        </div>
+        <p style="color: grey;margin-top: 3rem;">© 2023 Portfolio</p>
+    </section>
+    
+    
 </body>
 
 </html>

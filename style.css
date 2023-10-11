@@ -18,6 +18,8 @@ header {
     font-size: 1.5rem;
     position: sticky;
     top: 0;
+    z-index: 2;
+  
 }
 
 nav ul {
@@ -78,10 +80,13 @@ nav a:hover{
 }
 
 
-.skills{
-    padding: 2rem;
-    background-color: #77a0f8;
-    font-family: Montserrat;
+#skills{
+  padding: 2rem;
+  background-color: #77a0f8;
+  font-family: Montserrat;
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  align-items: center; /* Center the content vertically */
     
 }
 .exp{
@@ -100,7 +105,18 @@ nav a:hover{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     text-align: center; 
   }
-  
+  .skill-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    width: 50%;
+ 
+    align-self: center;
+    padding: 3rem;
+    border-radius: 5px;
+}
 
   .logo {
     width: 80px; 
@@ -125,16 +141,14 @@ nav a:hover{
     font-weight: 500;
   }
   /* Style the skill cards container */
-  .skills{  
-    margin: auto;
-    padding: auto;
-  }
+
 .skill-text-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    
   }
   
   /* Style individual skill cards */
@@ -144,9 +158,12 @@ nav a:hover{
     margin: 1rem;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    
     
   }
   
@@ -168,4 +185,100 @@ nav a:hover{
     transform: scale(1.05);
     transition: transform 0.3s ease;
   }
+  .expPro {
+    font-family: Montserrat;
+    font-size: 10vh;
+    font-weight: 600;
+    padding: 1rem; /* Reduce the top padding/margin */
+    text-align: center; /* Center the text horizontally */
+}
+
+
+  #projects {
+    margin-top: 0; /* Add this to remove the top margin */
+    font-family: Poppins;
+
+}
+
   
+
+  .project-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3rem;
+}
+
+.project-card {
+  width: 300px;
+  /* padding: 2rem; */
+  margin: 10px;
+  /* border: 1px solid #ccc; */
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background-color: #fcfcfc;
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 aspect ratio (adjust this value as needed) */
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+.title-desc{
+  padding: 1.5rem;
+}
+
+
+
+#contact {
+  background-color: #0c0c0c; /* Set a background color */
+  padding: 2rem;
+  text-align: center; /* Center the content horizontally */
+  font-family: Montserrat; 
+  color: white;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+ margin-top:5rem;
+
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: #525252; /* Link text color */
+  margin: 0 1rem;
+  font-size: 1.2rem;
+}
+
+.contact-links a:hover {
+  color: #007bff; /* Hover color */
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+}
